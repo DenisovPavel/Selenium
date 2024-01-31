@@ -44,18 +44,17 @@ public class LoginPageTest extends AbstractTest {
 
     @Test
     @DisplayName("Тест на простое изменение имени")
-        // DONE 2
     void getDummyNameRewritten() throws InterruptedException {
         driver.get("https://test-stand.gb.ru/login");
         LoginPage loginPage = new LoginPage(driver);
         loginPage.loginInSystem(getLogin(), getPassword());
 
         RemakeNamePage remakeNamePage = new RemakeNamePage(driver);
-        remakeNamePage.openFirstDummyCardAndSaveNewName("NotDummy");
+        remakeNamePage.openFirstDummyCardAndSaveNewName("New Dummy2");
 
         WebElement searchElement = driver.
                 findElement(By.xpath("//div[@class='container svelte-tv8alb']/h1"));
-        Assertions.assertEquals("NotDummy", searchElement.getText());
+        Assertions.assertEquals("New Dummy2", searchElement.getText());
 
     }
 
@@ -66,10 +65,10 @@ public class LoginPageTest extends AbstractTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.loginInSystem(getLogin(), getPassword());
         RemakeNamePage remakeNamePage = new RemakeNamePage(driver);
-        remakeNamePage.openFirstDummyCardAndSaveNewName("I'm fine,thanks");
+        remakeNamePage.openFirstDummyCardAndSaveNewName("New Dummy2");
         remakeNamePage.openProfile();
         WebElement webElement = driver.findElement(By.cssSelector("tbody tr td"));
-        Assertions.assertEquals("96720", webElement.getText());
+        Assertions.assertEquals("96751", webElement.getText());
     }
 
 

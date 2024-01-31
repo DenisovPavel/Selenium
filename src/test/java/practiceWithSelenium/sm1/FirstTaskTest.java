@@ -1,4 +1,4 @@
-package sm1H;
+package practiceWithSelenium.sm1;
 
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;

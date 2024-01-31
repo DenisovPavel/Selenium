@@ -1,5 +1,4 @@
-package sm1H;
-
+package practiceWithSelenium.sm1;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -8,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.time.Duration;
 import java.util.List;
 
@@ -39,6 +39,13 @@ public class createPostDummy extends FirstTaskTest {
         buttonPage.click();
         List<WebElement> elementsDummy = driver.findElements(By.xpath("//h1[@class='svelte-tv8alb']"));
         Assertions.assertEquals("New Dummy test",elementsDummy.get(0).getText());
-
+//        File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+//        try{
+//            FileUtils.copyFile =(screenshot,new File("\\src\\test\\resources\\screenshotDummy.png"));
+//
+//        } catch (IOException exception){
+//            exception.printStackTrace();
+//
+//        }
     }
 }

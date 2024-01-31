@@ -4,7 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+/**
+ * @params CreatePostPage - pattern PageObject -> создания Поста на странице;
+ */
 public class CreatePostPage {
     @FindBy(xpath = "//*[@type='text']")
     private WebElement title;
